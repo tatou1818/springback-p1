@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import net.javaguides.springboot.exception.ResourceNotFoundException;
 import net.javaguides.springboot.model.Employee;
+import net.javaguides.springboot.model.Employee;
 import net.javaguides.springboot.repository.EmployeeRepository;
 
 @RestController
@@ -34,11 +35,12 @@ public class EmployeeController {
 		
 	}
 	
-	//createee employee
+	//createee employee from a form
 	@PostMapping("/employees")
 	public Employee createEmployee(@RequestBody Employee employee) {
 		return employeerepository.save(employee);
 	}
+	
 	
 	//get employee by Id
 	@GetMapping("/employees/{id}")
